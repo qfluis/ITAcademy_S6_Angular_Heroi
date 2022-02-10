@@ -17,13 +17,16 @@ export class EscenaComponent implements OnInit {
 
   prev(){
     (this.currentSentence > 0)?this.currentSentence--:this.currentSentence;
+    this.setBackground();
   }
 
   next(){
     (this.currentSentence < (this.data.length-1))?this.currentSentence++:this.currentSentence;
+    this.setBackground();
   }
   setBackground(){
-    
+    let fondo:HTMLElement | null = document.getElementById("fondo");
+    fondo!.style.backgroundImage = "url('./assets/images/" + (this.currentSentence+1) + ".jpg')";
   }
 
 
