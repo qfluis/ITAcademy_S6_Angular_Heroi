@@ -1,6 +1,17 @@
-p {
+p{
     border: 0.2rem solid black;
     border-radius:2rem;
     padding:1rem;
     text-align: center;
+}
+.resaltado{
+    background-color: #FFC0CB;
+}
+
+.buttons {
+    display: flex;
+}
+.buttons button{
+    flex-grow: 1;
+    padding: 1rem;
 }
