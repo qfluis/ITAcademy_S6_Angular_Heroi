@@ -1,5 +1,8 @@
-<div class="buttons">
-    <button (click)="prev()">Anterior</button><button (click)="next()">Següent</button>
+<div #fondo class="fondo">
+    <div class="buttons">
+        <button (click)="prev()">Anterior</button><button (click)="next()">Següent</button>
+    </div>
+    <div class="frases">
+        <p *ngFor="let frase of data; let i = index" [ngClass]="{resaltado:(i==currentSentence)}" >{{frase.txt}}</p>
+    </div>
 </div>
-<p *ngFor="let frase of data; let i = index" [ngClass]="{resaltado:(i==currentSentence)}" >{{frase}}</p>
-

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Frase } from  'src/app/interfaces/Frase'
 
 @Component({
   selector: 'app-escena',
@@ -9,7 +10,7 @@ export class EscenaComponent implements OnInit {
 
   currentSentence:number;
 
-  @Input() data:string[] = [];
+  @Input() data:Frase[] = [];
   constructor() { 
     this.currentSentence = 0;
   }
@@ -20,6 +21,9 @@ export class EscenaComponent implements OnInit {
 
   next(){
     (this.currentSentence < (this.data.length-1))?this.currentSentence++:this.currentSentence;
+  }
+  setBackground(){
+    
   }
 
 
